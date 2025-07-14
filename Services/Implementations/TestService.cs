@@ -1,7 +1,7 @@
 
-using TemplateApi.Services.interfaces;
+using TemplateApi.Services.Interfaces;
 
-namespace TemplateApi.Services
+namespace TemplateApi.Services.Implementations
 {
     public class TestService : ITestService
     {

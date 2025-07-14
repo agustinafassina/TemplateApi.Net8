@@ -1,5 +1,6 @@
 using TemplateApi.Services;
-using TemplateApi.Services.interfaces;
+using TemplateApi.Services.Implementations;
+using TemplateApi.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 

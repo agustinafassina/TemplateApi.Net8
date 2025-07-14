@@ -1,5 +1,5 @@
 using AutoMapper;
-using TemplateApi.Services.interfaces;
+using TemplateApi.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace TemplateApi.Controllers

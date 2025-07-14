@@ -1,4 +1,4 @@
-namespace TemplateApi.Services.interfaces
+namespace TemplateApi.Services.Interfaces
 {
     public interface ITestService
     {
