@@ -10,7 +10,7 @@ builder.Services.AddAutoMapper(typeof(TemplateApi.Mappers.ContractMapping));
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddTransient<ITestService, TestService>();
+builder.Services.AddTransient<IItemService, ItemService>();
 
 var app = builder.Build();
 
