@@ -8,6 +8,8 @@ This repository provides a REST API template built with .NET 8, designed to stre
 └─ ./Services/Implementations <br>
 └─ ./Unitest <br>
 └─ ./Controllers <br>
+└─ azure-pipelines-acr.yml: pipeline for the Azure Container Registries provider <br>
+└─ azure-pipelines-ecr.yml: pipeline for the Aws and Elastic container registry <br>
 └─ Dockerfile <br>
 └─ README.md <br>
 
