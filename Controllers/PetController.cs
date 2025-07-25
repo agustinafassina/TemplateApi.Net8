@@ -26,14 +26,14 @@ namespace TemplateApi.Controllers
         [HttpGet("pet-two")]
         public IActionResult GetItems()
         {
-            var items = _itemService.GetAllItems();
+            IEnumerable<Services.Dto.ItemDto>? items = _itemService.GetAllItems();
             return Ok(items);
         }
 
         [HttpGet("pet-three/{id}")]
         public IActionResult GetById(int id)
         {
-            var item = _itemService.GetItemById(id);
+            Services.Dto.ItemDto item = _itemService.GetItemById(id);
             if (item == null) return NotFound();
             return Ok(item);
         }

@@ -10,7 +10,6 @@ namespace TemplateApi.Services.Implementations
 
         public ItemService()
         {
-            // Datos de ejemplo
             _items.Add(new ItemDto { Id = 1, Name = "Item 1" });
             _items.Add(new ItemDto { Id = 2, Name = "Item 2" });
         }
@@ -27,8 +26,8 @@ namespace TemplateApi.Services.Implementations
 
         public ItemDto CreateItem(ItemCreateDto newItem)
         {
-            var newId = _items.Max(i => i.Id) + 1;
-            var item = new ItemDto { Id = newId, Name = newItem.Name };
+            int newId = _items.Max(i => i.Id) + 1;
+            ItemDto item = new ItemDto { Id = newId, Name = newItem.Name };
             _items.Add(item);
             return item;
         }

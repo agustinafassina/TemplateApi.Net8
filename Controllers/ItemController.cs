@@ -1,7 +1,6 @@
 using AutoMapper;
 using TemplateApi.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using TemplateApi.Services.Dto;
 using Microsoft.AspNetCore.Authorization;
 
 namespace TemplateApi.Controllers
@@ -36,14 +35,14 @@ namespace TemplateApi.Controllers
         [HttpGet("items")]
         public IActionResult GetItems()
         {
-            var items = _itemService.GetAllItems();
+            IEnumerable<Services.Dto.ItemDto>? items = _itemService.GetAllItems();
             return Ok(items);
         }
 
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
-            var item = _itemService.GetItemById(id);
+            Services.Dto.ItemDto item = _itemService.GetItemById(id);
             if (item == null) return NotFound();
             return Ok(item);
         }
