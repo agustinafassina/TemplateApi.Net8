@@ -1,46 +1,36 @@
 using AutoMapper;
 using TemplateApi.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using TemplateApi.Services.Dto;
-using Microsoft.AspNetCore.Authorization;
 
 namespace TemplateApi.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
-    public class ItemController : ControllerBase
+    [Route("api/v1/[controller]")]
+    public class PetController : ControllerBase
     {
         private readonly IItemService _itemService;
         private readonly IMapper _mapper;
 
-        public ItemController(IItemService itemService, IMapper mapper)
+        public PetController(IItemService itemService, IMapper mapper)
         {
             _itemService = itemService;
             _mapper = mapper;
         }
 
-        [Authorize(AuthenticationSchemes = "Auth0App1")]
-        [HttpGet("version")]
+        [HttpGet("pet-one")]
         public async Task<IActionResult> GetVersion()
         {
-            return Ok("v.1.0.0");
+            return Ok("Cleooo :!");
         }
 
-        [HttpGet("v2/version")]
-        public async Task<IActionResult> GetVersionv2()
-        {
-            return Ok("v.2.0.0");
-        }
-
-
-        [HttpGet("items")]
+        [HttpGet("pet-two")]
         public IActionResult GetItems()
         {
             var items = _itemService.GetAllItems();
             return Ok(items);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("pet-three/{id}")]
         public IActionResult GetById(int id)
         {
             var item = _itemService.GetItemById(id);
