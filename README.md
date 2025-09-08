@@ -1,11 +1,11 @@
 ## Template.Api
 This folder contains the main API project with all controllers and configurations. It serves as the core application for client interactions.
 
-## 📄API Reference
-### Api Diagram
+## 📄 API Reference
+### Diagram
 <img src="api-diagram.png" alt="Logo del proyecto" width="400" height="450">
 
-### 🔐Authorization in the Api
+### 🔐Authorization
 It implements JWT authentication to secure endpoints, validating issuer, audience, and signature, allowing access only to authorized users.
 ```
 [Authorize(AuthenticationSchemes = "Auth0App1")]
