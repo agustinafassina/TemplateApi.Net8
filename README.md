@@ -1,4 +1,4 @@
-## Template.Api
+## Template.Api.Net8
 This folder contains the main API project with all controllers and configurations. It serves as the core application for client interactions.
 
 ## 📄 API Reference
